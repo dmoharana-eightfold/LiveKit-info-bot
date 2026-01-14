@@ -12,6 +12,9 @@ A voice AI assistant for employee directory lookups built with [LiveKit Agents](
 
 ## Architecture
 
+<img width="960" height="632" alt="Screenshot 1404-10-24 at 14 42 34" src="https://github.com/user-attachments/assets/2cdb898c-f62f-42a5-acda-138ed725db61" />
+
+
 ## Project Structure
 
 ```
