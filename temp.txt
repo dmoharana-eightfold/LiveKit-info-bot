@@ -1,0 +1,7 @@
+Streaming IS already enabled in the current Groq plugin:
+stream=True is set in the API call
+Chunks are sent via send_nowait() for immediate delivery
+
+
+        # Generate a USER token, not an agent token
+        # The agent is automatically connected by LiveKit when requested

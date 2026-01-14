@@ -1,0 +1,143 @@
+[
+    {
+    "name": "Aarav Sharma",
+    "email": "aarav.sharma@company.com",
+    "role": "Backend Engineer",
+    "department": "Platform Engineering",
+    "salary": 100000
+    },
+    {
+    "name": "Aarav Verma",
+    "email": "neha.verma@company.com",
+    "role": "Frontend Engineer",
+    "department": "Web Engineering",
+    "salary": 900000
+    },
+    {
+    "name": "Rohit Mehta",
+    "email": "rohit.mehta@company.com",
+    "role": "DevOps Engineer",
+    "department": "Infrastructure",
+    "salary": 800000
+    },
+    {
+    "name": "Priya Nair",
+    "email": "priya.nair@company.com",
+    "role": "Product Manager",
+    "department": "Product",
+    "salary": 700000
+    },
+    {
+    "name": "Kunal Singh",
+    "email": "kunal.singh@company.com",
+    "role": "Data Engineer",
+    "department": "Data Platform",
+    "salary": 600000
+    },
+    {
+    "name": "Ananya Gupta",
+    "email": "ananya.gupta@company.com",
+    "role": "UX Designer",
+    "department": "Design",
+    "salary": 500000
+    },
+    {
+    "name": "Vikram Rao",
+    "email": "vikram.rao@company.com",
+    "role": "Mobile Engineer",
+    "department": "App Development",
+    "salary": 400000
+    },
+    {
+    "name": "Sneha Iyer",
+    "email": "sneha.iyer@company.com",
+    "role": "QA Engineer",
+    "department": "Quality Assurance",
+    "salary": 300000
+    },
+    {
+    "name": "Arjun Patel",
+    "email": "arjun.patel@company.com",
+    "role": "Cloud Engineer",
+    "department": "Infrastructure",
+    "salary": 200000
+    },
+    {
+    "name": "Pooja Kulkarni",
+    "email": "pooja.kulkarni@company.com",
+    "role": "Business Analyst",
+    "department": "Business Operations",
+    "salary": 100000
+    },
+    {
+    "name": "Rahul Chatterjee",
+    "email": "rahul.chatterjee@company.com",
+    "role": "ML Engineer",
+    "department": "AI Research",
+    "salary": 50000
+    },
+    {
+    "name": "Ishita Malhotra",
+    "email": "ishita.malhotra@company.com",
+    "role": "Technical Writer",
+    "department": "Documentation",
+    "salary": 25000
+    },
+    {
+    "name": "Siddharth Jain",
+    "email": "siddharth.jain@company.com",
+    "role": "Security Engineer",
+    "department": "Information Security",
+    "salary": 15000
+    },
+    {
+    "name": "Meera Joshi",
+    "email": "meera.joshi@company.com",
+    "role": "HR Manager",
+    "department": "Human Resources",
+    "salary": 10000
+    },
+    {
+    "name": "Aditya Kuldeep",
+    "email": "aditya.kuldeep@company.com",
+    "role": "Site Reliability Engineer",
+    "department": "Platform Engineering",
+    "salary": 50000
+    },
+    {
+    "name": "Nikhil Bansal",
+    "email": "nikhil.bansal@company.com",
+    "role": "Solutions Architect",
+    "department": "Enterprise Solutions",
+    "salary": 40000
+    },
+    {
+    "name": "Riya Saxena",
+    "email": "riya.saxena@company.com",
+    "role": "Marketing Manager",
+    "department": "Marketing",
+    "salary": 30000
+    },
+    {
+    "name": "Manish Tiwari",
+    "email": "manish.tiwari@company.com",
+    "role": "Support Engineer",
+    "department": "Customer Support",
+    "salary": 20000
+    },
+    {
+    "name": "Kavya Reddy",
+    "email": "kavya.reddy@company.com",
+    "role": "Scrum Master",
+    "department": "Agile Delivery",
+    "salary": 10000
+    },
+    {
+    "name": "Dibyashakti Moharana",
+    "email": "dmoharana@gmail.com",
+    "role": "Engineering Intern",
+    "department": "Engineering",
+    "salary": 100000
+    }
+    ]
+    

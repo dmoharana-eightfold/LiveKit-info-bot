@@ -1,0 +1,188 @@
+
+🚀 Welcome to the Team : Agentic Platform
+We are thrilled to have you join us. Our core mission is to build the next generation of AI
+Interviewers and Voice Assistants through the development of a sophisticated, real-time
+voice agent pipeline.
+Core Technology Stack
+To achieve our mission, our platform leverages a modern, powerful set of technologies:
+● Backend: Python (Flask, Flask-RESTX for API services)
+● Frontend: Typescript (React)
+● Voice Agent Development: Expertise in key AI and real-time communication
+components:
+○ LLMs (Tool Calling, RAG, Streaming, LangGraph)
+○ LiveKit
+○ Voice Activity Detection (VAD)
+○ Text-to-Speech (TTS) and Speech-to-Text (STT)
+○ Prompt Engineering
+Essential Resources for Onboarding
+We've compiled a set of resources to help you quickly become comfortable with our tech stack
+and core concepts:
+Category Description Resource Links
+Python General language learning. Learn Python
+Flask - Rest X Backend framework
+documentation.
+Full Stack Python - Flask,
+Flask-RESTX Docs
+React - Typescript Frontend development
+tutorial.
+React Tutorial: Tic-Tac-Toe
+S3 Video resource on storage. S3 Video Resource
+Building Agents Foundational concepts for
+agentic AI.
+Function calling
+Prompt engineering
+voice agent architecture
+Streaming Responses
+LiveKit Short course on building
+voice agents for production.
+DeepLearning.AI Short
+Course
+Capstone Project to attempt before your first day at Eightfold
+● Estimated Time: 2 weeks
+● Mentors
+Please reach out to your mentors with any questions as you work through the resources
+and capstone project:
+○ Hari Kishore: hbalepalli@eightfold.ai
+○ Nilay Arora: narora@eightfold.ai
+○ Thiyaga: thiyagaraj@eightfold.ai
+Your First Mission!
+This initial task, "The LiveKit Info-Bot," is not an evaluation of your skills or performance.
+The sole purpose of this exercise is to serve as a guided introduction to the specific
+technologies and workflow we use daily in building our AI interviewer:
+● LiveKit Agents: For real-time voice interaction.
+● OpenAI Models & Tool Calling: For conversational logic and function execution.
+● React: For the frontend user experience.
+● Prompt Engineering: For guiding agent behavior.
+● Flask-RESTX: For building token generation APIs.
+Think of this as a structured familiarization module. This task is designed to help you get your
+local environment set up, gain hands-on experience with our core stack, and have something
+running successfully on your first week.
+This task will NOT be factored into any formal performance feedback or evaluation. We
+encourage you to ask questions, explore the documentation, and prioritize learning the flow over
+achieving perfection.
+Important Notes and Resources⚠️
+1. Focus on Learning, Not Speed
+This entire assignment is solely for your learning and familiarization purposes. The primary
+goal is for you to understand the architecture of a real-time voice agent and how the
+components (STT, LLM, TTS, Tools, Frontend) connect.
+2. Code Must Be Your Own
+To ensure maximum learning benefit, do not use generative AI coding tools such as GitHub
+Copilot, Cursor, ChatGPT, or Gemini to write the core logic for the agent or the custom LLM
+adapter. We want you to manually implement the LiveKit and OpenAI SDK interactions.
+3. API Key Flexibility
+● You can use OpenAI if you have an API key available.
+● Alternatively, please feel free to use other providers like Groq (if they offer a free
+tier/trial) or any other LLM service that provides a publicly accessible API key. You will
+need to substitute the LiveKit OpenAI plugin/SDK with the appropriate LiveKit plugin for
+your chosen model.
+4. LiveKit Server Access
+You can use the LiveKit Cloud platform, which offers a free tier, to obtain the necessary server
+URL, API Key, and Secret for connecting your agent.
+The LiveKit Info-Bot
+The goal is to build a voice assistant that can answer general knowledge questions and use a
+mock "tool" for specific information retrieval, demonstrating the full voice-agent pipeline,
+including API token handling.
+Part 1: The Core Agent (Backend/LiveKit Agent Logic)
+You will set up the LiveKit Agent backend, integrating the LLM and a custom function tool.
+1. Agent Structure and Basic Voice Integration
+● Action: Set up the basic LiveKit Agent structure using the LiveKit Agent SDK for
+Python.
+● Integration:
+○ Configure the agent to use an LLM (e.g., gpt-4o-mini) for conversation, a
+Speech-to-Text (STT) model and a Text-to-Speech (TTS) model.
+● Test: Initiate a simple conversation to ensure basic voice communication is working
+within the LiveKit environment (e.g., using the Agent Playground).
+2. Implementing Tool Calling
+● Goal: Create a custom function tool that the LLM can selectively call.
+● Action: Implement a mock get_employee_directory tool using the
+@function_tool decorator in Python.
+○ The function must accept an employee_name as an argument.
+○ It should return mock contact details (e.g., a simple hardcoded Python dictionary
+of names and emails).
+● Familiarization: Configure the agent to make the LLM aware of this tool, ensuring the
+tool's description guides the LLM on when to use it.
+3. Refining the Prompt (Prompt Engineering)
+● Goal: Guide the agent's behavior to be helpful, concise, and to use the tool ONLY when
+necessary.
+● Action: Refine the system prompt to:
+○ Define its persona ("You are a friendly, helpful, and concise voice assistant...").
+○ Establish Tool Usage Rule (MUST use the tool for contact info).
+○ Add a Safety/Scope Rule (explicitly refuse to look up non-directory information
+like salary).
+Part 1.5: API Backend for Token Generation (Flask-RESTX)
+You will create a separate, minimal REST API service to expose the LiveKit token generation
+process. This service will be called by the frontend.
+4. Build the Token API with Flask-RESTX
+● Goal: Create a service to programmatically generate the secure LiveKit Access Token
+required for the frontend client to connect to the LiveKit Room and interact with the
+Agent.
+● Action:
+1. Set up a new Python Flask application.
+2. Use the Flask-RESTX library to define a simple API endpoint (e.g.,
+/api/token).
+3. Implement the logic in this endpoint to use the LiveKit Python SDK's
+AccessToken utility to generate a short-lived token.
+4. The token must grant the client permissions to join a room and interact with the
+voice agent.
+5. The API should securely return the generated token as a JSON response.
+● Familiarization: Learn how to use environment variables (LIVEKIT_API_KEY,
+LIVEKIT_API_SECRET) securely within a Flask application.
+Part 2: The User Interface (Frontend)
+You will set up a minimal user interface to interact with the agent.
+5. React Frontend Integration
+● Goal: Create a simple web interface for a user to speak to and hear the agent.
+● Action:
+○ Use the LiveKit React SDK to build a minimal user interface.
+○ CRITICAL: Implement logic to first call the Flask-RESTX API endpoint
+(/api/token) to fetch the Access Token, and only then use that token to
+connect to the LiveKit Room.
+○ Display visual feedback (e.g., a button state or animation) that indicates when the
+user is speaking (STT), the agent is thinking (LLM), and the agent is
+speaking (TTS).
+Part 3: Advanced Customization (Bonus Task)
+This task focuses on integrating deeper into the LiveKit Agent framework by replacing the
+default LLM plugin with a custom, streaming implementation.
+6. Create a Custom Streaming LLM Adapter in Python
+● Goal: Implement a custom class that conforms to the LiveKit Agent's LLM interface to
+handle streaming Chat Completion API responses, simulating a proprietary model
+wrapper. This exercise shows how we integrate custom models into the LiveKit voice
+pipeline.
+● Action:
+1. Create a new Python class that implements the LiveKit Agents SDK's LLM
+abstract base class.
+2. The core task is to implement the chat method, which requires handling the
+conversion of the LiveKit ChatContext (history) and FunctionTool definitions
+into the format required by the standard OpenAI Python SDK's
+client.chat.completions.create method.
+3. You must specifically handle the streaming nature of the OpenAI response and
+yield LiveKit ChatChunk objects sequentially to maintain the low-latency feel
+required for voice agents.
+4. Ensure your custom LLM correctly processes the conversation history and
+passes tool definitions for the LLM to use.
+● Integration: Update your AgentSession initialization in the agent's entry point to use
+an instance of your new custom LLM class instead of the standard LiveKit OpenAI plugin
+(e.g., llm=CustomOpenAILLM(...)).
+Success Criteria: The agent still functions perfectly (general conversation and tool calling
+work), but is now powered by your custom LLM wrapper, demonstrating familiarity with the
+internal architecture of the LiveKit Agent's pipeline nodes and the requirements for streaming
+LLM responses in a voice context.
+Final Deliverable✅
+A working repository containing the Python agent backend code, the Flask-RESTX token API
+code, and the React frontend code, along with clear README.md instructions on how to run
+them and a demonstration of the success criteria (including the bonus task).
+
+
+session = AgentSession(
+        # stt=inference.STT(model="assemblyai/universal-streaming", language="en"),
+        stt="assemblyai/universal-streaming:en",
+        llm=groq.LLM(model="llama-3.3-70b-versatile"),
+        # llm=inference.LLM(model="openai/gpt-4.1-mini"),
+        tts=inference.TTS(
+            model="cartesia/sonic-3",
+            # model="cartesia/ink-whisper",
+            voice="9626c31c-bec5-4cca-baa8-f8ba9e84c8bc",
+            # cartesia/sonic-3:a167e0f3-df7e-4d52-a9c3-f949145efdab
+            # cartesia/sonic-3:5c5ad5e7-1020-476b-8b91-fdcbe9cc313c
+            # **cartesia/sonic-3:9626c31c-bec5-4cca-baa8-f8ba9e84c8bc
+            # cartesia/sonic-3:f31cc6a7-c1e8-4764-980c-60a361443dd1
+        ),

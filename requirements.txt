@@ -1,0 +1,7 @@
+livekit-agents[silero,turn-detector]
+livekit-plugins-noise-cancellation
+livekit-plugins-groq
+python-dotenv
+flask
+flask-cors
+flask-restx
